@@ -1,0 +1,108 @@
+body{
+  user-select: none;
+}
+.resources {
+  position: fixed;
+  bottom: 180px;
+  right: 200px;
+  z-index: 99;
+}
+
+.resources > div {
+  height: 60px;
+  width: 200px;
+  transition: all 0.3s linear;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  filter: brightness(1);
+}
+.resources > div:hover {
+  filter: brightness(1.2);
+}
+
+.market-madness {
+  background: url(/assets/market-madness.png) center bottom no-repeat;
+  background-size: cover;
+}
+
+.actions .action {
+  transition: all 0.2s ease-in-out;
+  transform: scale(0.5);
+  user-select: none;
+  filter: drop-shadow(2px 4px 6px black);
+}
+.actions .action:hover {
+  transform: scale(0.75) rotate(10deg);
+}
+
+.actions .action:active {
+  transform: scale(0.75) rotate(18deg);
+}
+
+.timebar {
+  height: 2px;
+  transition: all 0.25s linear;
+}
+
+#stats *, #rps * {
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+.status-bar {
+  position: fixed;
+  bottom: 0;
+  background: rgba(6, 4, 22, 0.5);
+  border: 3px solid;
+  border-top-right-radius: 0.25rem;
+}
+
+.upgrades {
+  background: rgba(31, 0, 255, 0.5);
+  border: 3px solid white;
+}
+.upgrades h4 {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid;
+}
+
+.upgrades button {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--light);
+  transition: all 0.2s linear;
+}
+.upgrades button:hover {
+  background: rgba(6, 4, 22, 0.5);
+  border-radius: 0.25rem;
+}
+
+.audio-controls{
+  position: absolute;
+  top: .25rem;
+  left: .25rem;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+  color: var(--light);
+  z-index: 99;
+}
+
+@media screen and (max-width: 700px) {
+  .status-bar {
+    position: relative;
+    border-radius: none;
+  }
+  .resources {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+  }
+  .resources > div {
+    height: 60px;
+    position: relative;
+  }
+}

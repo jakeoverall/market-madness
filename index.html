@@ -1,0 +1,96 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="theme.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Market Madness</title>
+  </head>
+  <body class="market-madness">
+    <div class="audio-controls text-white">
+      <i class="fas fa-volume-mute mr-2" onclick="togglePlay(event)"></i>
+    </div>
+    <audio id="bgMusic" src="assets/Windless Slopes.mp3" volume=".4" autoplay="true" loop="true"></audio>
+    <div class="status-bar">
+      <div class="text-light p-2 text-center">
+        <div class="d-flex align-items-center justify-content-center">
+          <h3>
+            <i class="fa fa-calendar mr-2"></i>
+            <span id="month" class="mr-2">Jan</span>
+            <span>Year</span>
+            <span id="year">1</span>
+          </h3>
+        </div>
+        <div id="timebar" class="timebar bg-danger"></div>
+        <div class="text-left">
+          <h5 class="d-flex align-items-center justify-content-between">
+            <span class="mr-2">Currency:</span>
+            <span id="currency">$0</span>
+          </h5>
+          <h5 class="d-flex align-items-center justify-content-between">
+            <span class="mr-2">Overhead:</span>
+            <span id="overhead" class="text-danger">($0)</span>
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions container-fluid">
+      <div class="row">
+        <div class="col-4">
+          <div class="action text-center" onclick="collect('fish')">
+            <img src="assets/fishing.png" height="120" alt="" />
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="action text-center" onclick="collect('wood')">
+            <img src="assets/wood-axe.png" height="120" alt="" />
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="action text-center" onclick="collect('ore')">
+            <img src="assets/pick.png" height="120" alt="" />
+          </div>
+        </div>
+      </div>
+      <div
+        id="stats"
+        class="text-light p-lg-2 d-flex align-items-center justify-content-around flex-wrap"
+      ></div>
+      <div
+        id="rps"
+        class="text-light p-lg-2 d-flex align-items-center justify-content-around flex-wrap"
+      ></div>
+    </div>
+
+    <div id="upgrades" class="upgrades text-white p-2 m-1 m-lg-5 rounded">
+      <h4>Markèt-O</h4>
+      <h6>Click Enhancements</h6>
+      <div id="clickUpgrades" class="d-flex flex-column flex-wrap"></div>
+      <h6 class="mt-2">Passive Enhancements</h6>
+      <div id="autoUpgrades" class="d-flex flex-column flex-wrap"></div>
+    </div>
+
+    <div class="resources">
+      <div id="fish" onclick="sell('fish')" class="p-2 bg-primary"></div>
+      <div id="wood" onclick="sell('wood')" class="p-2 bg-success"></div>
+      <div id="ore" onclick="sell('ore')" class="p-2 bg-secondary"></div>
+    </div>
+
+    <script src="app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/05277fe618.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
