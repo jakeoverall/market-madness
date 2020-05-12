@@ -25,7 +25,7 @@ body{
 }
 
 .market-madness {
-  background: url(/assets/market-madness.png) center bottom no-repeat;
+  background: url(assets/market-madness.png) center bottom no-repeat;
   background-size: cover;
 }
 
