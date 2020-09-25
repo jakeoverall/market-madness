@@ -167,6 +167,13 @@ function cycleMonth() {
 
   income.current -= overhead;
 
+  adjustMonthlyGoods();
+  goods.sort((a, b) => b.price - a.price);
+  drawGoods();
+  drawMonth();
+}
+
+function adjustMonthlyGoods() {
   goods.forEach(g => {
     let multiplier = 1;
     let sway = Math.random();
@@ -195,9 +202,6 @@ function cycleMonth() {
     </div>
     `;
   });
-  goods.sort((a, b) => b.price - a.price);
-  drawGoods();
-  drawMonth();
 }
 
 function drawStock() {
