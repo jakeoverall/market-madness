@@ -1,4 +1,5 @@
 # Moon-Miner
+<a href="https://codeclimate.com/github/jakeoverall/market-madness/maintainability"><img src="https://api.codeclimate.com/v1/badges/32292e08db5498adc508/maintainability" /></a>
 
 ![Moon](./moon.jpg)
 Legend holds that the moon is made of cheese. We sent a team of astronauts and discovered that it was true! It was only a matter of time before mining this treasure became big business. Begin your corporation on their endeavor to mine the moon!
