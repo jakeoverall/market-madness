@@ -187,21 +187,25 @@ function adjustMonthlyGoods() {
       sway = 0.6;
     }
     g.price = parseFloat((g.price * (sway + multiplier)).toFixed(2));
-    g.elem.innerHTML = `
-    <div class="d-flex align-items-center justify-content-between w-100 p-1">
-      <div class="d-md-flex flex-column align-items-center d-none">
-        <img src="assets/money.png" height="25"/>
-        <b>SELL</b>
-      </div>
-      <div class="d-flex flex-column align-items-center">
-        <span>
-          ${g.name} 
-        </span>
-        <span>$${g.price.toFixed(2)}</span>
-      </div>
-    </div>
-    `;
+    g.elem.innerHTML = getGoodTemplate(g)
   });
+}
+
+function getGoodTemplate(good){
+  return /*html*/`
+  <div class="d-flex align-items-center justify-content-between w-100 p-1">
+    <div class="d-md-flex flex-column align-items-center d-none">
+      <img src="assets/money.png" height="25"/>
+      <b>SELL</b>
+    </div>
+    <div class="d-flex flex-column align-items-center">
+      <span>
+        ${good.name} 
+      </span>
+      <span>$${good.price.toFixed(2)}</span>
+    </div>
+  </div>
+  `;
 }
 
 function drawStock() {
